@@ -36,20 +36,68 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-/* write all the steps invloved */
+1. Open Quartus Prime software and create a new project.
+
+2. Select the project location, project name, and target FPGA device.
+
+3. Create a new Verilog HDL file for the 8-to-3 Encoder using Dataflow Modelling.
+
+4. Write the Verilog code for the encoder using assign statements and logical OR operations.
+
+5. Save the file with `.v` extension and add it to the Quartus project.
+
+6. Set the encoder module as the top-level entity.
+
+7. Compile the design using **Processing → Start Compilation**.
+
+8. Verify that the compilation is completed successfully without errors.
+
+9. Generate the RTL schematic to verify the logic implementation of the encoder circuit.
+
+10. Open the University Program Waveform Editor for simulation.
+
+11. Create the input waveforms for `din[0]` to `din[7]` according to the truth table combinations.
+
+12. Run the functional simulation and observe the outputs `a`, `b`, and `c`.
+
+13. Verify the output timing waveforms with the truth table values of the 8-to-3 Encoder.
+
+14. Record the obtained simulation outputs and waveform results.
+
+
 
 **PROGRAM**
 
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
-*/
+
+Developed by: Sujin M L
+
+RegisterNumber: 212225040435
+
+```
+module D5(din, a, b, c);
+
+    input [0:7] din;
+    output a, b, c;
+
+    assign a = (din[4] | din[5] | din[6] | din[7]);
+    assign b = (din[2] | din[3] | din[6] | din[7]);
+    assign c = (din[1] | din[3] | din[5] | din[7]);
+
+endmodule
+```
+
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+<img width="1919" height="1079" alt="Screenshot 2026-05-24 151052" src="https://github.com/user-attachments/assets/ec5f8846-b923-4cd0-bcd3-2863a4c3d3c0" />
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
+<img width="1919" height="1079" alt="Screenshot 2026-05-24 151310" src="https://github.com/user-attachments/assets/621adc32-4fa7-4a90-bfa3-af897bfc42ac" />
 
 **RESULTS**
+
+Thus the Encoder 8-to-3 using Dataflow Modelling was successfully implemented using Verilog HDL in Quartus Prime software
+
 
 
 
